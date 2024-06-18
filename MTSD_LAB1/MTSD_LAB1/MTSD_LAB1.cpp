@@ -11,11 +11,6 @@ string outputText;
 enum { ERROR0 = -10, ERROR1 = -1, ERROR2 = -2, SUCCESS = 1 };
 
 int main(int argc, char* argv[]) {
-    //навмисно поганий коміт
-    while (1) {
-        return 0;
-    }
-
     if (argc == 1) {
         cerr << "ERROR0: Need at least 1 argument\n";
         return ERROR0;
