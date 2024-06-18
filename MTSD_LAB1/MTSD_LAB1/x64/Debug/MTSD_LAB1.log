@@ -1,0 +1,7 @@
+﻿  MTSD_LAB1.cpp
+D:\Stuff\soft\C++\MTSD_Lab1\MTSD_LAB1\MTSD_LAB1.cpp(90,59): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Stuff\soft\C++\MTSD_Lab1\MTSD_LAB1\MTSD_LAB1.cpp(101,70): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Stuff\soft\C++\MTSD_Lab1\MTSD_LAB1\MTSD_LAB1.cpp(106,24): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Stuff\soft\C++\MTSD_Lab1\MTSD_LAB1\MTSD_LAB1.cpp(112,97): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Stuff\soft\C++\MTSD_Lab1\MTSD_LAB1\MTSD_LAB1.cpp(121,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  MTSD_LAB1.vcxproj -> D:\Stuff\soft\C++\MTSD_Lab1\x64\Debug\MTSD_LAB1.exe
