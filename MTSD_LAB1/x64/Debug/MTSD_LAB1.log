@@ -1,0 +1,9 @@
+﻿  MDtoHTML.cpp
+D:\Stuff\soft\C++\MTSD_LAB1\MTSD_LAB1\MDtoHTML.cpp(38,75): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Stuff\soft\C++\MTSD_LAB1\MTSD_LAB1\MDtoHTML.cpp(48,70): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Stuff\soft\C++\MTSD_LAB1\MTSD_LAB1\MDtoHTML.cpp(53,24): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Stuff\soft\C++\MTSD_LAB1\MTSD_LAB1\MDtoHTML.cpp(59,97): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Stuff\soft\C++\MTSD_LAB1\MTSD_LAB1\MDtoHTML.cpp(68,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  MTSD_LAB1.cpp
+  Generating Code...
+  MTSD_LAB1.vcxproj -> D:\Stuff\soft\C++\MTSD_LAB1\x64\Debug\MTSD_LAB1.exe
