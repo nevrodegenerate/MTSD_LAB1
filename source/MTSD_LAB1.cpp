@@ -9,11 +9,16 @@ enum { ERROR0 = -10, ERROR1 = -11, ERROR2 = -12, ERROR3 = -13, ERROR4 = -14 };
 enum { SUCCESS0 = -1, SUCCESS1 = 0, SUCCESS2 = 1};
 
 int InputKey();
+int InputFile(ifstream& file);
 int IsStringValid(string input);
 int EquationSolver(float k1, float k2, float k3);
 
 int main(int argc, char* argv[]) {
     if (argc == 1) return InputKey();
+    else if (argc == 2) {
+        ifstream userfile(argv[1]);
+        return InputFile(userfile);
+    }
     else {
         cout << "ERROR0: Too many arguments";
         return ERROR0;
@@ -49,6 +54,51 @@ int InputKey() {
     }
 
     return EquationSolver(coeficients[0], coeficients[1], coeficients[2]);
+}
+
+int InputFile(ifstream& file) {
+    if (!file.is_open()) {
+        cout << "ERROR1: Wrong input path or filename\n";
+        return ERROR1;
+    }
+
+    string text;
+    text.assign(istreambuf_iterator<char>(file), istreambuf_iterator<char>());
+    string textBuffer = "";
+
+    int cindex = 0; //coeficient index
+    const int COUNT = 3;
+    float coeficients[COUNT];
+
+    for (int i = 0; i < text.length(); i++) {
+        if (text[i] == ' ' || i == text.length() - 1) {
+            if (IsStringValid(textBuffer)) {
+                coeficients[cindex] = stof(textBuffer);
+                cindex++;
+                textBuffer.clear();
+
+                if (!(cindex - 1) && coeficients[0] == 0) {
+                    cout << "ERROR3: First coeficient can not be 0";
+                    return ERROR3;
+                }
+                if (cindex == COUNT) {
+                    if (i == text.length() - 1 && text[i] == '\n') {
+                       return EquationSolver(coeficients[0], coeficients[1], coeficients[2]);
+                    }
+                    else {
+                        cout << "ERROR2: Invalid text fromat. Text must end with a single '\\n' and no characters between last coeficiient and '\\n'";
+                        return ERROR2;
+                    }
+                }
+                continue;
+            }
+            else {
+                cout << "ERROR2: Invalid text format. Characters can not be converted to float";
+                return ERROR2;
+            }
+        }
+        textBuffer += text[i];
+    }
 }
 
 int IsStringValid(string input) {
