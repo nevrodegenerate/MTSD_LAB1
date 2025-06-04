@@ -13,8 +13,6 @@ int IsStringValid(string input);
 int EquationSolver(float k1, float k2, float k3);
 
 int main(int argc, char* argv[]) {
-    //Intentionally ends program
-    if (true) return -999;
     if (argc == 1) return InputKey();
     else {
         cout << "ERROR0: Too many arguments";
